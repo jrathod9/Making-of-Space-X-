@@ -10,12 +10,12 @@ var particle = function(x,y,radius){
 }
 
 var atom = new particle(100,100,30);							//Define atom particle 
-
+var xspeed = 1;													//Define x direction speed  
 function draw(){			
 	
 	c.clearRect(0,0,window.innerWidth,window.innerHeight);		//Clears the entire canvas 
 	
-	atom.x += 1;												//Update x coordinate		
+	atom.x += speed;											//Update x coordinate		
 	
 	//Drawing the particle 
 	c.beginPath();
