@@ -7,13 +7,24 @@ var particle = function(x,y,radius){
 	this.x = x;
 	this.y = y;
 	this.radius = radius;	
-	//this refers to the owner object, i.e. an instance of particle
 }
 
-var atom = new particle(100,100,30);
+var atom = new particle(100,100,30);							//Define atom particle 
 
-c.beginPath();
-c.fillStyle = 'aqua';
-c.arc(atom.x,atom.y,atom.radius,0, Math.PI*2,false);
-c.closePath();
-c.fill();
+function draw(){			
+	
+	c.clearRect(0,0,window.innerWidth,window.innerHeight);		//Clears the entire canvas 
+	
+	atom.x += 1;												//Update x coordinate		
+	
+	//Drawing the particle 
+	c.beginPath();
+	c.fillStyle = 'aqua';
+	c.arc(atom.x,atom.y,atom.radius,0, Math.PI*2,false);
+	c.closePath();
+	c.fill();
+	
+	requestAnimationFrame(draw);								//Called inside the function
+}
+
+draw();															//Initial function call
