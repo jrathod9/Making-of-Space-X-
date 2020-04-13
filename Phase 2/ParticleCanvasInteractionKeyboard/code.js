@@ -17,7 +17,10 @@ var yspeed = 7;														//Define y direction speed
 function draw(){			
 	
 	c.clearRect(0,0,window.innerWidth,window.innerHeight);			//Clears the entire canvas 
-			
+	
+	c.font = "15px Calibri";
+	c.fillText("Press arrow keys", window.innerWidth/2-20 , window.innerHeight/2-20);
+
 	if(keys[37])				//if left is true
 		atom.x-=xspeed;			//move left by xspeed
 	else if(keys[39])			//else if right is true

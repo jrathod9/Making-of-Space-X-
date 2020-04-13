@@ -14,7 +14,10 @@ var xspeed = 1;													//Define x direction speed
 function draw(){			
 	
 	c.clearRect(0,0,window.innerWidth,window.innerHeight);		//Clears the entire canvas 
-			
+
+	c.font = "15px Calibri";
+	c.fillText("Click anywhere", window.innerWidth/2-20 , window.innerHeight/2-20);
+	
 	//Drawing the particle 
 	c.beginPath();
 	c.fillStyle = 'aqua';
