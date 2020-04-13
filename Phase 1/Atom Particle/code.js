@@ -15,7 +15,7 @@ function draw(){
 	
 	c.clearRect(0,0,window.innerWidth,window.innerHeight);		//Clears the entire canvas 
 	
-	atom.x += speed;											//Update x coordinate		
+	atom.x += xspeed;											//Update x coordinate		
 	
 	//Drawing the particle 
 	c.beginPath();
