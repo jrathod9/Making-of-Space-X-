@@ -1,7 +1,7 @@
 var canvas = document.querySelector('#canvas');	  
 var c = canvas.getContext('2d');
-canvas.width = window.innerWidth;	
-canvas.height = window.innerHeight;	
+canvas.width = window.innerWidth-20;	
+canvas.height = window.innerHeight-20;	
 
 var totalBullets = 0; 		//bullets on screen
 var health = 90;			//health of player
