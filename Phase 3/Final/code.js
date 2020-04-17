@@ -67,8 +67,10 @@ function draw(){
 
 	c.clearRect(0,0,window.innerWidth,window.innerHeight);
 
-	for(a = 0 ; a < Aliens.length ; a++)
+	for(a = 0 ; a < Aliens.length ; a++){
+		Aliens[a].y += alienSpeed;
 		drawAlien(Aliens[a]);
+	}
 	
 	//Check bullets that left the screen and remove them from array
 	for(a = 0 ; a < Bullets.length ; a++)
