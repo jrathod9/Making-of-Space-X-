@@ -10,10 +10,11 @@ var maxAliens = 5;			//Max aliens on the screen
 var bulletSpeed = 7;		//Speed of the bullet
 var alienSpeed = 0.2;		//Speed of the aliens
 
+//Will be used to add a flickering effect to the bullets and spaceshuttle
+var bulletColors = ["cyan", "aqua" ,"turquoise", "teal" ,"lightcyan","mediumaquamarine","blue" ,"black"];	
+
+/* THESE VARIABLES ARE FOR DRAWING THE SHUTTLE AND ALIENS */
 //spaceshuttle props and dimensions
-
-var bulletColors = ["cyan", "aqua" ,"turquoise", "teal" ,"lightcyan","mediumaquamarine","blue" ,"black"];
-
 var cannonw = 10,cannonh = 20;
 var midBottomw = 24,midBottomh = 20 ,midTopw = 16,midToph = 20;
 var baseBottomw = 36 ,baseBottomh = 24 ,baseTopw = 28 ,baseToph = 24;
@@ -21,7 +22,6 @@ var ridgew = 16 ,ridgeh = 16;
 var colorBack = "aqua", colorFront = "blue";
 var shuttleSpeedh = 7;
 var shuttleSpeedv  = 4;
-
 //alien props and dimanesions
 var bunw = 20,bunh = 6;
 var headw = 26,headh = 6 ;
