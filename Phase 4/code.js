@@ -17,6 +17,8 @@ var alive = 1;				//1 alive 0 dead
 
 //Will be used to add a flickering effect to the bullets and spaceshuttle
 var bulletColors = ["cyan", "aqua" ,"turquoise", "teal" ,"lightcyan","mediumaquamarine","blue" ,"black"];	
+//Used to add a flickering effect to the aliens
+var alienColors = ["darkgreen","green","seagreen","lime"];
 
 /* THESE VARIABLES ARE FOR DRAWING THE SHUTTLE AND ALIENS */
 //spaceshuttle props and dimensions
@@ -211,6 +213,7 @@ function draw(){
 		drawShuttle(player);
 	}
 	else{								//DEAD STATE
+		
 		c.beginPath();
 		c.fillStyle = 'rgba(255,255,255,0.5)';
 		c.font = "30px Calibri";
@@ -225,7 +228,7 @@ function draw(){
 draw();
 
 function drawAlien(alien){
-	c.fillStyle = bulletColors[Math.floor(Math.random()*6)];
+	c.fillStyle = alienColors[Math.floor(Math.random()*4)];
 	c.beginPath();
 	c.fillRect(alien.x - bunw/2,alien.y - faceh/2 - headh - bunh , bunw , bunh);
 	c.fillRect(alien.x - headw/2 , alien.y - faceh/2 - headh, headw , headh);
