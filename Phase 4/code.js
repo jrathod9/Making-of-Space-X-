@@ -71,7 +71,38 @@ function draw(){
 		Aliens[a].y += alienSpeed;
 		drawAlien(Aliens[a]);
 	}
+
+	//Check if alien touches shuttle or crosses screen to reduce health
+	for( j=0 ; j<Aliens.length ; j++)
+	{	
+		if(Math.abs(Aliens[j].y - player.y) <= 60 && Math.abs(Aliens[j].x - player.x)<=18 ||  Aliens[j].y >= window.innerHeight -30){	
+			health-=30;
+			var addAlien = new alien(Math.random()*(window.innerWidth-100)+60, Math.random()*(window.innerHeight/2-300),Math.floor(Math.random()*2));
+			Aliens[j] = addAlien;
+		}
+	}
 	
+	//Drawing the health bar
+	c.beginPath();
+	if(health == 90){
+		c.fillStyle = "green";
+		healthbarHeight = 90*6;
+	}
+	else if(health == 60){
+		c.fillStyle = "orange";
+		healthbarHeight = 60*6;
+	}	
+	else if(health == 30){
+		c.fillStyle = "red";
+		healthbarHeight = 30*6;
+	}
+	else{
+		healthbarHeight = 0;
+	}
+	c.fillRect(20, 20, 20 , healthbarHeight );
+	c.closePath();
+	c.fill();
+
 	//Check bullets that left the screen and remove them from array
 	for(a = 0 ; a < Bullets.length ; a++)
 	{
